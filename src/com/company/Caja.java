@@ -11,7 +11,6 @@ public class Caja implements Runnable {
     public Caja(String caja) {
         this.nom = caja;
     }
-
     @Override
     public void run(){
 
