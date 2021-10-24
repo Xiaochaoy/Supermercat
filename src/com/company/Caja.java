@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Caja {
     String nom;
-    String nomClient;
     ArrayList<Client> clients = new ArrayList<>();
     Basura basura = new Basura();
     int contador;
@@ -16,8 +15,7 @@ public class Caja {
     public void start(){
 
         for (int i = 0; i < Math.random()*5+2; i++) {
-            nomClient = basura.nom[(int) (Math.random()*basura.nom.length)];
-            clients.add(new Client(nomClient));
+            clients.add(new Client(basura.nom[(int) (Math.random()*basura.nom.length)]));
             contador++;
         }
         System.out.println(nom + " tiene "+ contador + " Clientes");
@@ -28,7 +26,7 @@ public class Caja {
                 c.carro.total += prod.precio;
             }
 
-            String formattedString = String.format("%.02f", c.carro.total);
+            String formattedString = String.format("%.2f", c.carro.total);
             System.out.println(nom + " " + c.nom +" --> Total pagament: " + formattedString + "€");
         }
     }

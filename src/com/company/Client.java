@@ -26,15 +26,6 @@ public class Client {
             int numero = (int) (Math.random()*basura.nomTotal.length);
             carro.productos.add(new Producto(basura.nomTotal[numero], basura.precioTotal[numero]));
         }
-
-
-        /*System.out.println();
-        System.out.println("Client" + nom);
-        System.out.print("Total pagament: ");
-        System.out.printf("%.2f",carro.total);
-        System.out.println("€");*/
-
-
     }
 }
 /*
