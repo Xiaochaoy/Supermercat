@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Caja {
+public class Caja implements Runnable {
     String nom;
     ArrayList<Client> clients = new ArrayList<>();
     Basura basura = new Basura();
@@ -12,7 +12,8 @@ public class Caja {
         this.nom = caja;
     }
 
-    public void start(){
+    @Override
+    public void run(){
 
         for (int i = 0; i < Math.random()*5+2; i++) {
             clients.add(new Client(basura.nom[(int) (Math.random()*basura.nom.length)]));

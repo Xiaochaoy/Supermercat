@@ -14,7 +14,7 @@ public class Main {
         for (Caja cj : cajas) {
             ExecutorService executor = Executors.newSingleThreadExecutor();
             executor.submit(() -> {
-                cj.start();
+                cj.run();
                 executor.shutdown();
             });
         }
