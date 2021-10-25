@@ -10,9 +10,8 @@ public class Main {
         for (int i = 1; i < Math.random()*5+2; i++) {
             cajas.add(new Caja("Caja" + i));
         }
-
+        ExecutorService executor = Executors.newSingleThreadExecutor();
         for (Caja cj : cajas) {
-            ExecutorService executor = Executors.newSingleThreadExecutor();
             executor.submit(() -> {
                 cj.run();
                 executor.shutdown();
